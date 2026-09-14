@@ -1,0 +1,81 @@
+{
+  "actions": [],
+  "autoname": "format:TLOG-{vehicle}-{#####}",
+  "creation": "2026-09-04 12:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "vehicle",
+    "timestamp",
+    "cb_1",
+    "state_of_charge",
+    "remaining_range_km",
+    "is_charging",
+    "charging_power_kw"
+  ],
+  "fields": [
+    {
+      "fieldname": "vehicle",
+      "fieldtype": "Link",
+      "label": "Vehicle",
+      "options": "EV6 Vehicle",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "timestamp",
+      "fieldtype": "Datetime",
+      "label": "Timestamp",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "state_of_charge",
+      "fieldtype": "Percent",
+      "label": "State of Charge (%)",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "remaining_range_km",
+      "fieldtype": "Float",
+      "label": "Remaining Range (km)",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_charging",
+      "fieldtype": "Check",
+      "label": "Is Charging",
+      "default": "0"
+    },
+    {
+      "fieldname": "charging_power_kw",
+      "fieldtype": "Float",
+      "label": "Charging Power (kW)",
+      "default": "0.0"
+    }
+  ],
+  "module": "Kia EV6 Automation",
+  "name": "EV6 Telemetry Log",
+  "naming_rule": "Expression",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "timestamp",
+  "sort_order": "DESC"
+}

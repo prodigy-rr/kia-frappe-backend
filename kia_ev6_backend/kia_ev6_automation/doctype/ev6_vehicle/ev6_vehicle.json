@@ -1,0 +1,206 @@
+{
+  "actions": [],
+  "autoname": "field:vin",
+  "creation": "2026-09-04 12:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "vin",
+    "vehicle_name",
+    "model_variant",
+    "trim",
+    "drivetrain",
+    "model_year",
+    "vehicle_color",
+    "cb_state",
+    "is_locked",
+    "is_trunk_open",
+    "is_hood_open",
+    "odometer_km",
+    "cb_battery",
+    "state_of_charge",
+    "remaining_range_km",
+    "is_charging",
+    "is_plugged_in",
+    "charging_power_kw",
+    "target_soc_limit",
+    "cb_climate",
+    "is_climate_on",
+    "target_temperature",
+    "is_defrost_on",
+    "is_steering_heater_on",
+    "seat_heating_level"
+  ],
+  "fields": [
+    {
+      "fieldname": "vin",
+      "fieldtype": "Data",
+      "label": "VIN",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "vehicle_name",
+      "fieldtype": "Data",
+      "label": "Vehicle Name",
+      "default": "Kia EV6 Wind AWD"
+    },
+    {
+      "fieldname": "model_variant",
+      "fieldtype": "Select",
+      "label": "Model Variant",
+      "options": "Standard Range\nLong Range RWD\nLong Range AWD\nGT-Line AWD\nGT"
+    },
+    {
+      "fieldname": "trim",
+      "fieldtype": "Select",
+      "label": "Trim",
+      "options": "Light\nWind\nGT-Line\nGT",
+      "default": "Wind"
+    },
+    {
+      "fieldname": "drivetrain",
+      "fieldtype": "Select",
+      "label": "Drivetrain",
+      "options": "RWD\nAWD",
+      "default": "AWD"
+    },
+    {
+      "fieldname": "model_year",
+      "fieldtype": "Int",
+      "label": "Model Year",
+      "default": "2024"
+    },
+    {
+      "fieldname": "vehicle_color",
+      "fieldtype": "Data",
+      "label": "Vehicle Color (Hex)",
+      "default": "#CC0000"
+    },
+    {
+      "fieldname": "cb_state",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_locked",
+      "fieldtype": "Check",
+      "label": "Is Locked",
+      "default": "1"
+    },
+    {
+      "fieldname": "is_trunk_open",
+      "fieldtype": "Check",
+      "label": "Is Trunk Open",
+      "default": "0"
+    },
+    {
+      "fieldname": "is_hood_open",
+      "fieldtype": "Check",
+      "label": "Is Hood Open",
+      "default": "0"
+    },
+    {
+      "fieldname": "odometer_km",
+      "fieldtype": "Float",
+      "label": "Odometer (km)",
+      "default": "0.0"
+    },
+    {
+      "fieldname": "cb_battery",
+      "fieldtype": "Section Break",
+      "label": "Battery & Charging"
+    },
+    {
+      "fieldname": "state_of_charge",
+      "fieldtype": "Percent",
+      "label": "State of Charge (%)",
+      "default": "80.0"
+    },
+    {
+      "fieldname": "remaining_range_km",
+      "fieldtype": "Float",
+      "label": "Remaining Range (km)",
+      "default": "350.0"
+    },
+    {
+      "fieldname": "is_charging",
+      "fieldtype": "Check",
+      "label": "Is Charging",
+      "default": "0"
+    },
+    {
+      "fieldname": "is_plugged_in",
+      "fieldtype": "Check",
+      "label": "Is Plugged In",
+      "default": "0"
+    },
+    {
+      "fieldname": "charging_power_kw",
+      "fieldtype": "Float",
+      "label": "Charging Power (kW)",
+      "default": "0.0"
+    },
+    {
+      "fieldname": "target_soc_limit",
+      "fieldtype": "Int",
+      "label": "Target SOC Limit (%)",
+      "default": "80"
+    },
+    {
+      "fieldname": "cb_climate",
+      "fieldtype": "Section Break",
+      "label": "Climate"
+    },
+    {
+      "fieldname": "is_climate_on",
+      "fieldtype": "Check",
+      "label": "Is Climate On",
+      "default": "0"
+    },
+    {
+      "fieldname": "target_temperature",
+      "fieldtype": "Float",
+      "label": "Target Temperature (°C)",
+      "default": "21.5"
+    },
+    {
+      "fieldname": "is_defrost_on",
+      "fieldtype": "Check",
+      "label": "Is Defrost On",
+      "default": "0"
+    },
+    {
+      "fieldname": "is_steering_heater_on",
+      "fieldtype": "Check",
+      "label": "Is Steering Wheel Heater On",
+      "default": "0"
+    },
+    {
+      "fieldname": "seat_heating_level",
+      "fieldtype": "Int",
+      "label": "Seat Heating Level (0-3)",
+      "default": "0"
+    }
+  ],
+  "module": "Kia EV6 Automation",
+  "name": "EV6 Vehicle",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
